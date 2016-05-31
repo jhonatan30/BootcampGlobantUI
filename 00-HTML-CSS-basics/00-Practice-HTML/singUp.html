@@ -3,15 +3,14 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Form</title>
-		<meta name="description" content="Form with validation and required fields">
+		<meta name="description" content="Form with validation and required fields"><link rel="stylesheet" href="css/singUp.css">
+		<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	</head>
 	
 	<body>
 		<section>
 			<form name="registration" method="get">
-			<hr />
-			
 			First name: 
 			<input type="text" name="name" required="Complete this field" placeholder="Don´t letters or simbols" pattern="[a-zA-Z]{2,100}">
 			<hr />
@@ -213,8 +212,9 @@
 			<textarea rows="5" cols="100" placeholder="Write your bio..."></textarea>
 			<hr />
       
-      <button type="submit" id="send"> Login</button>
+      <button type="submit" id="send"> Login </button>
       <button type="reset"> Delete </button> 
+      
 
 		</form>
 	</section>

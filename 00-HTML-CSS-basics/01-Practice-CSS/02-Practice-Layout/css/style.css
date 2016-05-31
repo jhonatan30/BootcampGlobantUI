@@ -7,14 +7,14 @@
 
 html
 {
-  background: 
+  background-color: #e84e40;
   font-size: 16px;
   font-family: 'Nunito', sans-serif;
 }
 
 .category
 {
-  color: #505050;
+  color: white;
   text-align: center;
   text-align: center;
   margin-top: 5px 0;
@@ -47,14 +47,14 @@ html
   width: 80%; 
   margin: 60px auto;
   padding: 20px;
-  background: #eee;
+  background-color: #78a3c7;
   overflow: hidden;
 }
 
 .header
 {
-  background: #3f6a95;
-  color: #6f8d69;
+  background-color: #0d3f69;
+  color: white;
   text-align: center;
   font-size: 1.5rem;
   height: 3rem;
@@ -71,7 +71,6 @@ html
 }
 
 .sidebar ul li a {
-  color: blue;
   text-decoration: none;
   display: block;
   font-size: 20px;
@@ -79,18 +78,18 @@ html
 
 .social-media
 {
- color: #3f6a95; 
+  color: white;
   margin-left: 10px;
 }
 
 .social-red
 {
-  color: #6f8d69 !Important;
+  color: #0d3f69;
 }
 
-.social-red:active
+.social-red:hover
 {
-  color: blue !Important;
+  color: blue;
 }
 
 .screen {
@@ -131,6 +130,8 @@ html
 }
 
 
+
+
 /*---------------------------*/
 /*LAYOUT SCHEME*/
 /*---------------------------*/
@@ -154,7 +155,7 @@ html
 /*---------------------------*/
 /*MEDIA QUERIES FOE SIDEBAR*/
 /*---------------------------*/
-@media all and (min-width: 1150px) {
+@media(min-width: 1150px) {
   .sidebar ul li a:after {
     content: " (" attr(data-email) ")";
     font-size: 11px;
@@ -163,7 +164,7 @@ html
   }
 } 
 
-@media all and (max-width: 1149px) and (min-width: 700px) 
+@media(max-width: 1149px) and (min-width: 745px) 
 {
   a[data-email*="git"]:after 
   {
@@ -238,4 +239,31 @@ html
   {
     height: 6rem;
   }
+
+@media (max-width: 500px){
+  .container
+  {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .sidebar
+  {
+    margin-left: -50px;
+    float: none;
+    text-align: center;
+  }  
+  .social-media
+  {
+    margin-left: 40px;
+  }
+
 }
+
+@media (max-width: 329px){
+  .header
+  {
+    height: 10rem;
+  }
+}
+

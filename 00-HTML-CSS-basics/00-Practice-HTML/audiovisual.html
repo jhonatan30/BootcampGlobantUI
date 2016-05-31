@@ -3,46 +3,40 @@
   <head>
     <meta charset="UTF-8" />
 		<title>Audiovisual elements</title>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/audiovisual.css">
 		<meta name="description" content="Image, audio and video">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<style>
-			.center-elements
-			{
-				text-align: center; text-align: -moz-center; text-align: -ms-center; text-align: -webkit-center;
-			}
-		</style>
   </head>
 
   <body>
 
-    <article class="center-elements">
-	  	<h1>Image</h1> 
-	  	<br />
-	  	<img src="images/html-css-javascript.png" alt="" width="300" height="125">
-		</article>
-    
-    <hr />
+    <h1> Media elements </h1>
 
-		<article class="center-elements">
-			<h1>Video</h1> 
-			<br />
-			<video  width="400" height="250" controls> 
-				<source src="video/html-css-js.mp4" type="video/mp4">
-  			<source src="video/" type="video/ogg">
-			</video>
-		</article>
+    <section class="img-section">
+    <h2>Image</h2>
+    <div> <img src="images/html-css-javascript.png" alt=""> </div>
+		</section>
 
-		<hr />
+		<section class="video-section">
+			<h2>Video</h2> 
+      <div>
+			  <video controls> 
+				  <source src="video/html-css-js.mp4" type="video/mp4">
+        </video>
+      </div>
+		</section>
 
-		<article class="center-elements"> 
-			<h1>Audio</h1> 
-			<br />
-			<audio controls>
-  			<source src="audio/alarma.mp3" type="audio/mpeg">
-  			<source src="audio/html-css-js.ogv" type="audio/ogg">
-			</audio>
-		</article>
+		<section class="audio-section"> 
+			<h2>Audio</h2>
+      <div>
+        <audio controls>
+  			 <source src="audio/alarma.mp3" type="audio/mpeg">
+  			 <source src="audio/html-css-js.ogv" type="audio/ogg">
+			  </audio>
+      </div>
+		</section>
 
 	</body>
 
