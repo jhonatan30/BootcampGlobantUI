@@ -46,6 +46,7 @@ body, html
 {
 	margin-top: 10px;
 	height: 200px;
+	position: relative;
 }
 
 .content
@@ -95,17 +96,24 @@ section>header
 .navigation
 {
 	background: #5d9abf;
-	float: left;
+	display: inline-block;
 	height: 100%;
 	width: 25%;
+	vertical-align: top;
+	position: absolute;
+	left: 0;
 }
+
 
 .sidebar
 {
 	background: #761a31;
-	float: right;
+	display: inline-block;
 	height: 100%;
 	width: 25%;
+	vertical-align: top;
+	position: absolute;
+	right: 0;
 }
 
 .text
