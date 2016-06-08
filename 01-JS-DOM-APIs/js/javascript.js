@@ -1,19 +1,27 @@
-window.onload = function() //PAGE LOADED
+//Page loaded
+window.onload = function()
 {
   setTimeout(function() {
     document.getElementById('section').className = '';
     }, 1000);
 
   var btnJoke, btnRepo;
+  flag = true;
 
   btnJoke = document.getElementById("btn-joke");
   btnJoke.onclick = getJoke;  
 
   btnRepo = document.getElementById("btn-repo");
   btnRepo.onclick = getRepo; 
+
+  btnTable = document.getElementById("btn-table");
+  btnTable.onclick = createTable; 
 }
 
 
+
+
+//Function for API Github
 function getJoke()
 {
   var req = new XMLHttpRequest();
@@ -37,14 +45,12 @@ function getJoke()
           // Otherwise reject with the status text
           // which will hopefully be a meaningful error
           reject(Error(req.statusText));
-          console.log("error1");
         }
       };
 
       // Handle network errors
       req.onerror = function() {
         reject(Error("Network Error"));
-        console.log("Error");
       };
 
       req.open('GET', url);
@@ -88,17 +94,15 @@ function getJoke()
 
 
 
-
+//Function for API Github
 function getRepo()
 {
   var reqRepo = new XMLHttpRequest();
-
   var inSearch = document.getElementById("et-search").value;
   if (inSearch.length == 0)
   {
-      alert("Please insert your search.")
+    alert("Please insert your search.");
   }
-  console.log(inSearch);
 
   function getR(url) 
   {
@@ -170,4 +174,101 @@ function getRepo()
     console.error("Failed!", error);
   });
 }
+
+
+function createTable (  ) 
+{
+  var matrixData = new Array();
+  
+  //name
+  matrixData[0] = document.getElementById("in-one").value;
+  //twitter
+  matrixData[1] = document.getElementById("in-two").value;
+  //Facebook
+  matrixData[2] = document.getElementById("in-three").value;
+  //github
+  matrixData[3] = document.getElementById("in-four").value;
+
+  for (var i = 0; i < 4; i++) 
+  {
+    if (matrixData[i] == 0) 
+    {
+      console.log(matrixData[i]);
+      alert("Please fill all fields.");
+      break;
+    }
+  }
+
+  // Obtener la referencia del elemento body
+  var body = document.getElementsByTagName("body")[0];
+  
+  // Crea un elemento <table> y un elemento <tbody>
+  var tabla   = document.createElement("table");
+  var tblBody = document.createElement("tbody");
+
+  console.log(flag);
+
+  if (flag == true) 
+  {
+    //Create Head
+    var headTable = document.createElement("tr");
+
+    var celda1 = document.createElement("td");
+    var celda2 = document.createElement("td");
+    var celda3 = document.createElement("td");
+    var celda4 = document.createElement("td");
+
+    var textoCelda1 = document.createTextNode("Name");
+    var textoCelda2 = document.createTextNode("Twitter User");
+    var textoCelda3 = document.createTextNode("Facebook user")
+    var textoCelda4 = document.createTextNode("GitHub User");
+
+    celda1.appendChild(textoCelda1);
+    celda2.appendChild(textoCelda2);
+    celda3.appendChild(textoCelda3);
+    celda4.appendChild(textoCelda4);
+
+    headTable.appendChild(celda1);
+    headTable.appendChild(celda2);
+    headTable.appendChild(celda3);
+    headTable.appendChild(celda4);
+
+    tblBody.appendChild(headTable);
+    //Create Head
+
+    flag = false;
+  }
+ 
+
+ 
+  //Creates row
+  for (var i = 0; i < 1; i++) {
+    // Crea las hileras de la tabla
+    var hilera = document.createElement("tr");
+ 
+    for (var j = 0; j < 4; j++) {
+      // Crea un elemento <td> y un nodo de texto, haz que el nodo de
+      // texto sea el contenido de <td>, ubica el elemento <td> al final
+      // de la hilera de la tabla
+      var celda = document.createElement("td");
+      var textoCelda = document.createTextNode(matrixData[j]);
+      celda.appendChild(textoCelda);
+      hilera.appendChild(celda);
+    }
+ 
+    // agrega la hilera al final de la tabla (al final del elemento tblbody)
+    tblBody.appendChild(hilera);
+  }
+ 
+  // posiciona el <tbody> debajo del elemento <table>
+  tabla.appendChild(tblBody);
+  // appends <table> into <body>
+  body.appendChild(tabla);
+  // modifica el atributo "border" de la tabla y lo fija a "2";
+  tabla.setAttribute("class", "table");
+
+}
+
+
+
 
