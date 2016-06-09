@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <title>Topic 1: JavaScript, and DOM APIs</title>
   <link rel="stylesheet" href="css/main.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="js/javascript.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='https://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
 
@@ -13,7 +11,7 @@
 <body>
   
   <!--  START CONTAINER LEFT-->
-  <div class="container">
+  <div class="container-frst">
     <h1>Topic 1: JavaScript, and DOM APIs</h1>
     <p>Lorem ipsum dolor sit amet</p>
 
@@ -23,19 +21,19 @@
     <h2>JavaScript</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
   
-    <section id="section" class="hidden">
+    <section id="hello-world" class="section hidden">
       <p>Hello world</p>
     </section>
 
 
     <div class="content-btn-joke">
       
-      <select id="optionJoke">
+      <select class="option-joke-style" id="optionJoke">
         <option value="https://api.icndb.com/jokes/random">Get Joke</option>
         <option value="0">Get Error</option>
       </select>
 
-      <button id="btn-joke"> JOKE </button>
+      <button class="btn-joke-style" id="btn-joke"> JOKE </button>
   
     </div>
   
@@ -48,32 +46,34 @@
   <!--  START CONTAINER RIGTH-->
   <div class="container-scnd">
     <h3>Search a repo on GitHub.</h3>
-    <input id="et-search" type="text" placeholder="Search" required> 
-    <button id="btn-repo" required> GET REPO</button>
+    <input class="et-search-style" id="et-search" type="text" placeholder="Search" required> 
+    <button class="btn-repo-style" id="btn-repo" required> GET REPO</button>
     <ul id="listRepos"> </ul>
   </div>
   <!--  FINISH CONTAINER RIGTH-->
-
-
 
   <p class="text" >Please fill the fields</p>
 
   <!--  START CONTAINER BOTTOM-->
   <div id="a" class="container-bottom">
     <div class="inputs">
-      <input class="inptuStyle" id="in-one"s type="text" placeholder="Name"> 
-      <input class="inptuStyle" id="in-two" type="text" placeholder="Twitter user"> 
-      <input class="inptuStyle" id="in-three" type="text" placeholder="Facebook user"> 
-      <input class="inptuStyle" id="in-four" type="text" placeholder="Github user"> 
+      <input class="inptuStyle" id="name"s type="text" placeholder="Name"> 
+      <input class="inptuStyle" id="twitter" type="text" placeholder="Twitter user"> 
+      <input class="inptuStyle" id="facebook" type="text" placeholder="Facebook user"> 
+      <input class="inptuStyle" id="github" type="text" placeholder="Github user"> 
     </div>
 
 
     <div class="conten-btn-table">
-      <button id="btn-table">SAVE</button>
+      <button class="btn-table-style" id="btn-table">SAVE</button>
     </div>
+
+    <div class="table-container"></div>
   </div>
   <!--  FINISH CONTAINER BOTTOM-->
 
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="js/tabla.js"></script>
+  <script src="js/javascript.js"></script>
 </body>
 </html>

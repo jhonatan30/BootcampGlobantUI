@@ -46,19 +46,15 @@ p
 	padding: 15px; 
 }
 
-
-#section
+div div input:first-child
 {
-	font-size: 2em;
-	font-weight: bold;
-	text-align: center;
-	width: 60%;
-	margin: 0 auto;
-    -webkit-transition: opacity 1s linear;
+	margin-left: 22px;
 }
 
 
-#btn-joke
+
+/*START STYLE CONTAINER LEFT*/
+.btn-joke-style
 {
 	background-color: #498EF3;
 	border-color: #498ef3;
@@ -67,27 +63,7 @@ p
 	width: 49%;
 }
 
-#btn-repo
-{
-	display: inline-block;
-	background-color: #498EF3;
-	border-color: #498ef3;
-	border-radius: 3px;
-	color: white;
-	width: 49%;
-}
-
-#joke
-{
-	
-}
-
-#optionJoke
-{
-	width: 49%;	
-}
-
-.container
+.container-frst
 {
 	background-color: #C7C7C7;
 	float: left;
@@ -96,26 +72,6 @@ p
 	padding: 10px;
 	width: 48%;
 }
-
-.container-scnd
-{
-	background-color: #C7C7C7;
-	float: right;
-	height: 670px;
-	margin: 10px 10px 0 0;
-	padding: 10px;
-	width: 48%;
-}
-
-.container-bottom
-{
-	clear: left;
-	margin: 0 auto;
-	padding: 10px;
-	width: 90%;
-	background-color: #009788;
-}
-
 
 .content-btn-joke
 {
@@ -136,16 +92,74 @@ p
     opacity: 0;
 }
 
-#et-search
+.option-joke-style
+{
+	width: 49%;	
+}
+
+.section
+{
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+	width: 60%;
+	margin: 0 auto;
+    -webkit-transition: opacity 1s linear;
+    -webkit-transition-delay: 1.5s;
+}
+/*FINISH STYLE CONTAINER LEFT*/
+
+
+
+/*START STYLE CONTAINER RIGTH*/
+.btn-repo-style
+{
+	display: inline-block;
+	background-color: #498EF3;
+	border-color: #498ef3;
+	border-radius: 3px;
+	color: white;
+	width: 49%;
+}
+
+.container-scnd
+{
+	background-color: #C7C7C7;
+	float: right;
+	height: 670px;
+	margin: 10px 10px 0 0;
+	padding: 10px;
+	width: 48%;
+}
+
+.et-search-style
 {
 	width: 50%;
 }
 
-#et-search:focus
+.et-search-style:focus
 {
 	background-color: #AED6FF;
+	transition: 0.5s linear;
 }
 
+/*FINISH STYLE CONTAINER RIGTH*/
+
+
+
+
+
+
+
+/*START STYLE CONTAINER BOTTOM*/
+.container-bottom
+{
+	clear: left;
+	margin: 0 auto;
+	padding: 10px;
+	width: 90%;
+	background-color: #009788;
+}
 
 .inputs
 {
@@ -158,11 +172,6 @@ p
 	width: 24%;
 }
 
-div div input:first-child
-{
-	margin-left: 22px;
-}
-
 .text
 {
 	font-size: 2em;
@@ -170,18 +179,12 @@ div div input:first-child
 	margin: 0 auto;	
 	text-align: center;
 }
+/*FINISH STYLE CONTAINER BOTTOM*/
 
 
-/*STYLE TABLE*/
-.table
-{
-	padding: 10px;
-	margin: 0 auto;
-	text-align: center;
-	background: #C4C4C4;
-}
 
-#btn-table
+/*START STYLE TABLE*/
+.btn-table-style
 {
 	background-color: #498EF3;
 	border-color: #498ef3;
@@ -196,14 +199,26 @@ div div input:first-child
 	margin: 10px auto;
 }
 
-tr
+.table
 {
-	border-top: 1px solid #000000;
-    width: 200px;
+	border-collapse: collapse;
+	text-align: center;
+	width: 80%;
+	margin: 0 auto;
 }
 
-td
+
+.tblhead
 {
-	border-top: 1px solid #000000;
-	width: 200px;
+	background-color: #2E9FFF;
+	border: 1px solid #000000;
+	color: #0069C3;
 }
+
+tr
+{
+	background-color: #B0DBFF;
+	border: 1px solid #000000;
+	color: #0075D9;
+}
+/*FINISH STYLE TABLE*/

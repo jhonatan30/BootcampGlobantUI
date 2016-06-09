@@ -1,29 +1,23 @@
 //Page loaded
 window.onload = function()
 {
-  setTimeout(function() {
-    document.getElementById('section').className = '';
-    }, 1000);
+  document.getElementById('hello-world').className = 'section';
 
-  var btnJoke, btnRepo;
-  flag = true;
-
-  btnJoke = document.getElementById("btn-joke");
+  var btnJoke = document.getElementById("btn-joke");
   btnJoke.onclick = getJoke;  
 
-  btnRepo = document.getElementById("btn-repo");
+  var btnRepo = document.getElementById("btn-repo");
   btnRepo.onclick = getRepo; 
 
-  btnTable = document.getElementById("btn-table");
-  btnTable.onclick = createTable; 
+  var btnTable = document.getElementById("btn-table");
+  btnTable.onclick = onClick; 
 }
-
-
 
 
 //Function for API Github
 function getJoke()
 {
+
   var req = new XMLHttpRequest();
 
   function get(url) 
@@ -175,98 +169,43 @@ function getRepo()
   });
 }
 
+var table = null;
+var tableContainer = document.querySelector(".table-container");
 
-function createTable (  ) 
-{
-  var matrixData = new Array();
+function onClick ( ){
+
+  var count = 0; //Count to control head table creation
+  var arrayData = [];  //Literal sintax
   
-  //name
-  matrixData[0] = document.getElementById("in-one").value;
-  //twitter
-  matrixData[1] = document.getElementById("in-two").value;
-  //Facebook
-  matrixData[2] = document.getElementById("in-three").value;
-  //github
-  matrixData[3] = document.getElementById("in-four").value;
+  arrayData[0] = document.getElementById("name").value;
+  arrayData[1] = document.getElementById("twitter").value;
+  arrayData[2] = document.getElementById("facebook").value;
+  arrayData[3] = document.getElementById("github").value;
 
   for (var i = 0; i < 4; i++) 
   {
-    if (matrixData[i] == 0) 
+    if (arrayData[i] == "") 
     {
-      console.log(matrixData[i]);
       alert("Please fill all fields.");
       break;
+    }else{
+      count += 1;
     }
   }
 
-  // Obtener la referencia del elemento body
-  var body = document.getElementsByTagName("body")[0];
-  
-  // Crea un elemento <table> y un elemento <tbody>
-  var tabla   = document.createElement("table");
-  var tblBody = document.createElement("tbody");
-
-  console.log(flag);
-
-  if (flag == true) 
-  {
-    //Create Head
-    var headTable = document.createElement("tr");
-
-    var celda1 = document.createElement("td");
-    var celda2 = document.createElement("td");
-    var celda3 = document.createElement("td");
-    var celda4 = document.createElement("td");
-
-    var textoCelda1 = document.createTextNode("Name");
-    var textoCelda2 = document.createTextNode("Twitter User");
-    var textoCelda3 = document.createTextNode("Facebook user")
-    var textoCelda4 = document.createTextNode("GitHub User");
-
-    celda1.appendChild(textoCelda1);
-    celda2.appendChild(textoCelda2);
-    celda3.appendChild(textoCelda3);
-    celda4.appendChild(textoCelda4);
-
-    headTable.appendChild(celda1);
-    headTable.appendChild(celda2);
-    headTable.appendChild(celda3);
-    headTable.appendChild(celda4);
-
-    tblBody.appendChild(headTable);
-    //Create Head
-
-    flag = false;
+  if (count == 4) {
+    addValues(arrayData); 
   }
- 
+    
+}
 
- 
-  //Creates row
-  for (var i = 0; i < 1; i++) {
-    // Crea las hileras de la tabla
-    var hilera = document.createElement("tr");
- 
-    for (var j = 0; j < 4; j++) {
-      // Crea un elemento <td> y un nodo de texto, haz que el nodo de
-      // texto sea el contenido de <td>, ubica el elemento <td> al final
-      // de la hilera de la tabla
-      var celda = document.createElement("td");
-      var textoCelda = document.createTextNode(matrixData[j]);
-      celda.appendChild(textoCelda);
-      hilera.appendChild(celda);
-    }
- 
-    // agrega la hilera al final de la tabla (al final del elemento tblbody)
-    tblBody.appendChild(hilera);
+function addValues (valuesList){
+  if(!table){
+    table = new Table();
+    tableContainer.appendChild(table.create());
   }
- 
-  // posiciona el <tbody> debajo del elemento <table>
-  tabla.appendChild(tblBody);
-  // appends <table> into <body>
-  body.appendChild(tabla);
-  // modifica el atributo "border" de la tabla y lo fija a "2";
-  tabla.setAttribute("class", "table");
 
+  table.addValues(valuesList[0],valuesList[1],valuesList[2],valuesList[3]);
 }
 
 
