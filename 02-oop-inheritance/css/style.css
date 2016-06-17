@@ -1,0 +1,129 @@
+.btn-style
+{
+	height: 50px;
+	margin: 10px;
+	width: 100px;
+}
+
+.btn-style-add
+{
+	height: 50px;
+	margin: 10px;
+	width: 100px;
+}
+
+.color-event
+{
+	color: #183691;
+}
+.color-method
+{
+	color: #795da3;
+}
+
+.color-number
+{
+	color: #0086b3;
+}
+
+.color-var
+{
+	color: #a71d5d;
+}
+
+.container-btn-done
+{
+	margin: 0 auto;
+	width: 120px;
+}
+
+.container-btns
+{
+	margin: 0 auto;
+	width: 370px;
+}
+
+.container-input-point-five
+{
+	font-family: monospace, monospace;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.container-list-point-five
+{
+	background-color: #F7F7F7;
+	margin: 0 auto;
+	padding: 5px;
+	width: 60%;
+	font-family: monospace, monospace;
+}
+
+.container-output-point-five
+{
+	background-color: #CCCCCC;
+	margin: 0 auto;
+	padding: 10px;
+	width: 60%;
+}
+
+.container-status
+{
+	margin: 0 auto;
+	height: 53px;
+	width: 90%;
+}
+
+.input-console
+{
+	display: inline-block;	
+	width: 80%;
+}
+
+.list-point-five
+{
+	
+}
+
+.status-creation
+{
+	text-align: center;
+}
+
+.status-movie
+{
+	text-align: center;
+}
+
+.point-five
+{
+	padding: 10px;
+	margin: 0 auto;
+	width: 60%;
+}
+
+
+.sub-title
+{
+	background-color: #F46157;
+	color: white;
+	font-color: white;
+	margin: 0 auto;
+	padding: 10px;
+	text-align: center;
+}
+
+.title
+{
+	background-color: #FDBB41;
+	color: white;
+	font-color: white;
+	margin: 0 auto;
+	padding: 10px;
+	text-align: center;
+}
+
+.txt-input-console
+{
+	display: inline-block;
+}

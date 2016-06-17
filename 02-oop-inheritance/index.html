@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Topic 2: Design Patterns and OOP in JavaScript</title>
+  <meta name="description" content="Practice topic 2">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <h1 class="title">Topic 2: Design Patterns and OOP in JavaScript</h1>
+  <h2 class="sub-title">POINT 5</h2>
+  <div>
+    <p class="point-five">Create a Logger class with a log(info) method that will output info to the console. Make log listen to a Movie's 'play' event. You should be able to do something like this in the console: </p> 
+  </div>
+
+
+  <div class="container-list-point-five">
+    <ol class="list-point-five">
+      <li id="step-one"> <span class="color-var"> let </span> newMovie <span class="color-var"> = new  </span> <span class="color-method">Movie</span>('Terminator', <span class="color-number">1984</span>, <span class="color-number">90</span>);</li>
+      <li id="step-two"> <span class="color-var"> let </span> <span class="color-method">logger</span> <span class="color-var"> =  new </span> Logger(); </li>
+      <li id="step-three">newMovie.<span class="color-method">on</span>(<span class="color-event">'play'</span>, logger.log);</li>
+      <li id="step-four">newMovie.<span class="color-method">play()</span>; // output: The 'play' event has been emitted</li>
+    </ol>
+  </div>
+
+  <div class="container-output-point-five">
+    
+    <div class="container-input-point-five">
+      <p class="txt-input-console">Input console:</p>
+      <input class="input-console" type="text" placeholder="Select option." id="input-option">  
+    </div>
+    <div class="container-btn-done">
+      <button class="btn-style" id="done">Done</button>
+    </div>
+    <hr />
+    <div class="container-status">
+      <p class="status-creation" id="creation-movie">  </p>
+      <p class="status-creation" id="output">  </p>
+    </div>
+
+  </div>
+
+  <h2 class="sub-title">POINT 6</h2>
+
+
+  <script src="js/pointFive.js"></script>
+</body>
+</html>
