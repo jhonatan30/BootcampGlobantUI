@@ -55,6 +55,7 @@ window.onload = function ()
 		log(info)
 		{
 			console.log('The \'' + info + '\' event has been emitted');
+			statusCreation.innerHTML = ('The \'' + info + '\' event has been emitted');
 		}
 	}
 
@@ -90,7 +91,6 @@ window.onload = function ()
 			str = option.value;  //taken all string from de input
 			eval(str);
 			document.getElementById("step-four").style.background="#ADFFE5";
-			statusCreation.innerHTML = ('The \'' + play + '\' event has been emitted');
 			a = 1;
 		}
 	}
