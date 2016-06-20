@@ -62,10 +62,9 @@ class Movie extends EventEmitter{
  			console.log(this.actorsCast);
  		}
    	}
-
-
-
 }								
+
+
 
 class Logger{
 	constructor(){
@@ -111,12 +110,9 @@ let otherCast = [
 avengers.addCast(robert);
 avengers.addCast(otherCast);
 
-let terminator = new Movie('Terminator', 1984, 90);
-let logger = new Logger();
-terminator.on('play', logger.log);
-terminator.play();
+avengers.on('play', logger.log);
+avengers.play();
 
-let avengers = new Movie('Iron Man', 2008, 126)
 avengers = Object.assign(avengers, Social);
 
 avengers.share('Mike Blossom');
